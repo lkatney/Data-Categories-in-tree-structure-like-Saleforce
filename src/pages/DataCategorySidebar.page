@@ -1,0 +1,15 @@
+<apex:page showHeader="true" sidebar="false" standardStylesheets="false" controller="DataCategorySidebarController">
+<apex:stylesheet value="{!URLFOR($Resource.jqtree, 'jqtree.css')}"/>
+
+<apex:includeScript value="https://code.jquery.com/jquery-1.11.3.min.js"/>
+<apex:includeScript value="{!URLFOR($Resource.jqtree, 'tree.jquery.js')}"/>
+
+<div id="sidebar"></div>
+<script>
+	var $$ = jQuery.noConflict();
+    var data = JSON.parse('{!sidebarData}');
+    $$('#sidebar').tree({
+        data: data
+    });
+</script>
+</apex:page>

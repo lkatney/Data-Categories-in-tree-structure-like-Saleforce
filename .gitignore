@@ -1,4 +1,5 @@
-.project
-.settings
-salesforce.schema
-Referenced Packages
+.DS_Store
+
+# Mavensmate Files #
+config/*
+*.sublime-*
